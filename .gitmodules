@@ -1,0 +1,9 @@
+[submodule "admin"]
+	path = admin
+	url = https://github.com/gzqichang/camel-store-admin.git
+[submodule "wxapp"]
+	path = wxapp
+	url = https://github.com/gzqichang/camel-store-wxapp.git
+[submodule "api"]
+	path = api
+	url = https://github.com/gzqichang/camel-store-api.git
