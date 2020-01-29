@@ -2,7 +2,7 @@
 
 ## 基础
 
-使用 `brew install git nginx postgresql pyenv` 安装基础软件，在此需要小心，有不少配置事项，建议一个一个软件来安装，以免遗漏重要的信息。
+使用 `brew install git nginx postgresql pyenv npm` 安装基础软件，在此需要小心，有不少配置事项，建议一个一个软件来安装，以免遗漏重要的信息。
 
 ## git
 
@@ -47,3 +47,22 @@
     1. `python manage.py init_staff` 创建初始用户数据
     1. `python manage.py updateconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py wechatconfig` 修改配置，相关的参数看一下帮助。
+    1. `python manage.py changepassword admin` 修改之前生成的 admin 账号的密码。
+1. 运行 `python manage.py runserver` 跑起来看看。
+    1. 打开浏览器，访问一下 `http://localhost:8000/api/`, 如果可以看到 rest-framework 的界面，表示 api 已经正常运行。
+    1. 再访问一下 `http://camelstore.dev.com:8080/api/`, 理论上来说，应该可以到同样的页面。如果不能访问，可能是 `nginx` 的监听端口不是 8080。
+
+
+## admin 部分
+
+进入 `admin` 目录。
+
+1. 运行 `npm install` 安装项目依赖的模块，这里视网络的情况，估计要一点时间。
+1. 运行 `npm start` 把 admin 跑起来，
+1. 打开浏览器，访问 `http://camelstore.dev.com:8080/` 应该可以看到 admin 的登陆界面，输入账号密码，可以成功登陆。
+
+## wxapp 部分
+
+略。
+
+至此，开发环境建立完成。
