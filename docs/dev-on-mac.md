@@ -6,7 +6,7 @@
 
 ## git
 
-1. 运行 `git clone https://github.com/gzqichang/camel-store.git` 把本仓库拉取到本地，
+1. 运行 `git clone https://github.com/gzqichang/camel-store.git --recurse-submodules` 把本仓库拉取到本地，记得需要加入 `--recurse-submodules` 参数。
 1. 进入 `camel-store` 目录
 
 推荐安装 [`fork`](https://git-fork.com/) 这个 git GUI 工具来完成其它日常操作，非常好用。
