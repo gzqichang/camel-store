@@ -2,7 +2,7 @@
 
 ## 基础
 
-使用 `brew install git nginx postgresql pyenv npm` 安装基础软件，在此需要小心，有不少配置事项，建议一个一个软件来安装，以免遗漏重要的信息。
+使用 `brew install git nginx postgresql pyenv pipenv npm` 安装基础软件，在此需要小心，有不少配置事项，建议一个一个软件来安装，以免遗漏重要的信息。
 
 ## git
 
@@ -17,7 +17,6 @@
 
 运行 `pyenv install 3.7.4` 安装你心仪的 `Python` 版本，`pyenv` 的基本使用建议参考它的手册，在此均以 3.7.4 为例。
 
-安装完成后，运行 `pyenv local 3.7.4` 把工作目录的 `Python` 设置为我们需要的版本。
 
 ## PostgreSQL
 
@@ -38,6 +37,19 @@
 ## api 部分
 
 进入 `api` 目录。
+
+运行 `pyenv local 3.7.4` 把工作目录的 `Python` 设置为我们需要的版本。
+1. 运行 `pip install -U pip setuptools` 升级包管理工具。
+
+要安装各种依赖。
+
+1. 运行 `pipenv install` 安装虚拟环境。
+1. 运行 `pipenv shell` 进入虚拟环境。
+1. 运行一下 `django-admin -v` 看看是不是 2.2 版本。目前我们还不支持 3.0 或更高版本。
+
+`cd packages` 进入依赖包的目录，然后分别进入 `qapi`、`qcache`、`qsmstoken`、`quser` 目录，逐一运行 `python setup.py develop` 安装开发版本。
+
+接下开始配置项目。
 
 1. `cd conf/settings`
 1. `cp local.py.tpl local.py` 生成本地配置环境。
