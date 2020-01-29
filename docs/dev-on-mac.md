@@ -76,6 +76,18 @@
 
 ## wxapp 部分
 
-略。
+进入 `wxapp` 目录。
+
+1. 运行 `npm install` 安装项目依赖的模块，这里视网络的情况，估计要一点时间。
+1. 运行 `npm run build` 编译 `wpy` 文件。
+1. 用`微信开发者工具`打开项目，可以在模拟器中看到小程序界面。
+
+默认数据接口是 `http://camelstore.dev.com:8080`，你可以在 `src/service/index.js` 文件中找到以下语句
+```
+export const baseUrl = 'http://camelstore.dev.com:8080';
+```
+修改 `baseUrl` 的值即可访问其他接口。
+
+---------------
 
 至此，开发环境建立完成。
