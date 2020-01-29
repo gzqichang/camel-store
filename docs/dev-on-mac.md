@@ -45,6 +45,7 @@
 1. 回退到 `api` 目录。
 1. 运行 `python manage.py migrate` 创建各种数据表，然后运行
     1. `python manage.py init_staff` 创建初始用户数据
+    1. `python manage.py format_groups` 创建初始分组数据
     1. `python manage.py updateconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py wechatconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py changepassword admin` 修改之前生成的 admin 账号的密码。
