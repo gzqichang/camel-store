@@ -31,4 +31,4 @@
 
 我们建立了一个官方微信群，先扫下面的二维码，加好友后说“我要加入 camel-store 官方群”即可。
 
-![企业微信](http://gzqichang.com/assets/img/contact-qrcode-qiyuewechat.png)
+![企业微信](contact-qrcode.png)
