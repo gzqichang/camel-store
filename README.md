@@ -23,6 +23,9 @@
 ## 在本机体验
 文档在编写中，先看一下 [docs](https://github.com/gzqichang/camel-store/tree/master/docs)。
 
+1. [Dev on MacOS](https://github.com/gzqichang/camel-store/blob/master/docs/dev-on-mac.md)
+1. Dev On Windows. to be done.
+
 ## 参与开发
 
 类似其他 github 项目，针对`admin`、`api`、`wxapp`三个仓库进行 fork，修改和测试后，欢迎提交 PR。

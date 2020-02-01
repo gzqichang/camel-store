@@ -43,7 +43,7 @@
 
 要安装各种依赖。
 
-1. 运行 `pipenv install` 安装虚拟环境。
+1. 运行 `pipenv sync` 安装虚拟环境。
 1. 运行 `pipenv shell` 进入虚拟环境。
 1. 运行一下 `django-admin -v` 看看是不是 2.2 版本。目前我们还不支持 3.0 或更高版本。
 
