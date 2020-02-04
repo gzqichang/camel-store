@@ -5,7 +5,7 @@
 需要提前安装并配置好下列软件
 
 - [`git`](https://git-scm.com/)  - 代码管理工具
-- [`nginx`](http://nginx.org/en/download.html)  - 负载均衡中间件
+- [`nginx`](http://nginx.org/en/download.html)  - web server
 - [`postgresql`](https://www.postgresql.org/)  - 数据库 (建议安装10版本)
 - [`node & npm`](https://nodejs.org/en/download/)  - npm 包管理工具
 - [`python`](https://www.python.org/downloads/windows/) - 建议安装 3.7 版本。
