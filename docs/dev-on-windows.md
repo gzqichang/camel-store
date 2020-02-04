@@ -49,10 +49,10 @@ server{
     }
 }
 ```
-
-2. 用 `nginx -t`  命令校验配置文件是否正确
-3. 运行 `nginx` 以启动nginx，如已启动，则重启 `nginx -s reload`
-4. 以管理员身份运行 `echo 127.0.0.1 camelstore.dev.com >> C:\Windows\System32\drivers\etc\hosts` 把域名加到 hosts 文件。
+2. 用记事本打开 `nginx.conf` 文件，在 http { } 里面加入 `include camelstore.dev.com.conf;`，以引用 `camelstore.dev.com.conf` 文件里的配置。
+3. 用 `nginx -t`  命令校验配置文件是否正确。
+4. 运行 `nginx` 以启动nginx，如已启动，则重启 `nginx -s reload`。
+5. 以管理员身份运行 `echo 127.0.0.1 camelstore.dev.com >> C:\Windows\System32\drivers\etc\hosts` 把域名加到 hosts 文件。
 
     1. 也可以管理员身份用记事本打开 `C:\Windows\System32\drivers\etc\hosts` , 末尾添加一行配置 `127.0.0.1 camelstore.dev.com`。
 
