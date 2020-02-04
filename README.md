@@ -28,7 +28,7 @@
 文档在编写中，先看一下 [docs](docs)。
 
 1. [Dev on macOS](docs/dev-on-macos.md)
-1. Dev On Windows. to be done.
+1. [Dev On Windows](docs/dev-on-windows.md)
 
 ## 服务器部署
 

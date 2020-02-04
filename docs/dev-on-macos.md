@@ -10,7 +10,7 @@
 
 文档中约定使用的数据库名为 `camelstore`，其为用户 `camelstore` 所有。
 
-> 建议使用 `[pgAdmin](https://www.pgadmin.org/)` 这个应用来完成新建数据库和用户的操作。
+> 建议使用 [`pgAdmin`](https://www.pgadmin.org/) 这个应用来完成新建数据库和用户的操作。
 
 ## Python
 
