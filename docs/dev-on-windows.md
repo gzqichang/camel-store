@@ -86,6 +86,7 @@ server{
     1. 打开浏览器，访问一下 `http://localhost:8000/api/`, 如果可以看到 rest-framework 的界面，表示 api 已经正常运行。
     1. 再访问一下 `http://camelstore.dev.com:8080/api/`, 理论上来说，应该可以到同样的页面。如果不能访问，可能是 `nginx` 的监听端口不是 8080。
 
+第三方配置，也是在 `local.py` 文件中，详见[第三方配置](third-party-config.md)。
 
 ## admin 部分
 
