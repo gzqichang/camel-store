@@ -67,9 +67,9 @@ Windows Server 2012 与普通 windows 版本最大的不同，在于其文件 / 
 1. 打开 `URL重写` 功能，右侧的 `操作` 下方点击打开 `查看服务器变量`，打开后在右侧的 `操作` 下方点击 `添加`，添加服务器变量，名称为：`HTTP_X_FORWARDED_HOST`。
 1. 回到 `URL重写` 页面，右侧的 `操作` 下方点击打开 `添加规则`，选中 `入站规则` 中的 `空白规则`，配置如下图：
 
-![](.deploy-on-windows_images/编辑入站规则（上）.png)
+    ![](.deploy-on-windows_images/编辑入站规则（上）.png)
 
-![](.deploy-on-windows_images/编辑入站规则（下）.png)
+    ![](.deploy-on-windows_images/编辑入站规则（下）.png)
 
 配置完成后，点击右侧的 `操作` 下方的 `应用`。
 
