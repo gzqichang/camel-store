@@ -47,6 +47,23 @@ Windows Server 2012 与普通 windows 版本最大的不同，在于其文件 / 
     1. `python manage.py updateconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py wechatconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py changepassword admin` 修改之前生成的 admin 账号的密码。
+
+    1. 在 `camel-store\api\conf\settings` 目录下，打开 `local.py` 文件，大概在 88 行看到下面内容：
+
+```
+STATIC_URL = '/api/static/'
+STATICFILES_DIRS = [
+    os.path.join(BASE_DIR, "staticfiles/"),
+]
+```
+
+回车下一行添加以下内容：
+
+```
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
+```
+
+运行 `python manager.py collectstatic` 后把 `STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')` 删除后保存文件。
     
 在 `api` 目录下，新建一个文本文件 `web.config`，写入以下内容：
 
