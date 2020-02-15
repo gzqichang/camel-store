@@ -74,27 +74,25 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
             <handlers>
                 <add name="Python FastCGI" path="*" verb="*" modules="FastCgiModule" scriptProcessor="c:\python37\python.exe|c:\python37\lib\site-packages\wfastcgi.py" resourceType="Unspecified" requireAccess="Script" />
             </handlers>
-        <rewrite>
-            <rules>
-                <rule name="static">
-                    <match url="^api/static(.*).png$" />
-                    <conditions>
-                        <add input="{URL}" pattern="^api/static(.*).png$" negate="true" />
-                    </conditions>
-                    <action type="Rewrite" url="http://127.0.0.1:8000/{R:0}" />
-                    <serverVariables>
-                    </serverVariables>
-                </rule>
-            </rules>
-        </rewrite>
-        <directoryBrowse enabled="false" showFlags="Date, Time, Size, Extension" />
+            <rewrite>
+                <rules>
+                    <rule name="static" enabled="true">
+                        <match url="^api/static(.*).png$" />
+                        <conditions>
+                            <add input="{URL}" pattern="^api/static(.*).png$" negate="true" />
+                            <add input="{SERVER_PORT}" pattern="80" negate="true" />
+                        </conditions>
+                        <action type="Rewrite" url="http://127.0.0.1:8000/{R:0}" />
+                    </rule>
+                </rules>
+            </rewrite>
         </system.webServer>
         <appSettings>
             <add key="WSGI_HANDLER" value="django.core.wsgi.get_wsgi_application()" />
             <add key="PYTHONPATH" value="C:\inetpub\wwwroot\camel-store\api" />
             <add key="DJANGO_SETTINGS_MODULE" value="conf.settings.local" />
-        <add key="WSGI_LOG" value="C:\Logs\camel-store-api.log" />
-        <add key="WSGI_RESTART_FILE_REGEX" value=".*((\.py)|(\.config))$" />
+            <add key="WSGI_LOG" value="C:\Logs\camel-store-api.log" />
+            <add key="WSGI_RESTART_FILE_REGEX" value=".*((\.py)|(\.config))$" />
         </appSettings>
     </configuration>
 ```
@@ -151,8 +149,6 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
                         <set name="HTTP_X_FORWARDED_HOST" value="{HTTP_HOST}" />
                     </serverVariables>
                     <action type="Rewrite" url="http://127.0.0.1:8000/{R:0}" />
-                    <conditions>
-                    </conditions>
                 </rule>
             </rules>
         </rewrite>
