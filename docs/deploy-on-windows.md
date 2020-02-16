@@ -158,6 +158,14 @@ STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 ## IIS
 
+`ARR` 配置
+
+1. 在 `C:\Windows\System32\inetsrv\config` 目录下，打开 `applicationHost.config` 文件，找到以下内容，如果 `enabled` 的值为 `false` 的话，需要把值改为 `true`。
+
+    ```
+    <proxy enabled="true" reverseRewriteHostInResponseHeaders="false" />
+    ```
+
 在 `IIS` 中新建2个网站。
 
 1. 一个用 `wfastcgi` 跑 `api` 这个 python 应用，在 127.0.0.1:8000 监听，物理路径：`camel-store\api` 目录。
