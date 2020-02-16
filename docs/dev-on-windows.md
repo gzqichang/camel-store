@@ -83,8 +83,8 @@ server{
     1. `python manage.py wechatconfig` 修改配置，相关的参数看一下帮助。
     1. `python manage.py changepassword admin` 修改之前生成的 admin 账号的密码。
 1. 运行 `python manage.py runserver` 跑起来看看。
-    1. 打开浏览器，访问一下 `http://localhost:8000/api/`, 如果可以看到 rest-framework 的界面，表示 api 已经正常运行。
-    1. 再访问一下 `http://camelstore.dev.com:8080/api/`, 理论上来说，应该可以到同样的页面。如果不能访问，可能是 `nginx` 的监听端口不是 8080。
+    1. 打开浏览器，访问一下 `http://localhost:8000/api/sitemap/`, 如果可以看到 rest-framework 的界面，表示 api 已经正常运行。
+    1. 再访问一下 `http://camelstore.dev.com:8080/api/sitemap/`, 理论上来说，应该可以看到同样的页面。如果不能访问，可能是 `nginx` 的监听端口不是 8080。
 
 第三方配置，也是在 `local.py` 文件中，详见[第三方配置](third-party-config.md)。
 
@@ -103,7 +103,7 @@ server{
 1. 运行 `npm install` 安装项目依赖的模块，这里视网络的情况，估计要一点时间。
 1. 运行 `npm i -g wepy-cli` 安排脚手架.
 1. 运行 `npm run build` 编译 `wpy` 文件。
-1. 用`微信开发者工具`打开项目(在`camel-store\wxapp\dist`目录)，可以在模拟器中看到小程序界面。
+1. 用 `微信开发者工具` 打开项目 (在 `camel-store\wxapp\dist` 目录)，可以在模拟器中看到小程序界面。
 
 默认数据接口是 `http://camelstore.dev.com:8080`，你可以在 `src/service/index.js` 文件中找到以下语句
 ```
