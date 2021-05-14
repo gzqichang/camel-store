@@ -32,7 +32,8 @@
 
 ## 服务器部署
 
-to be done.
+1. [Deploy on Ubuntu](docs/deploy-on-ubuntu.md)
+1. [Deploy on Windows](docs/deploy-on-windows.md)
 
 ## 参与开发
 
